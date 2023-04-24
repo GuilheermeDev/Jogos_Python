@@ -45,3 +45,6 @@ def jogar():
         pontos = pontos - pontos_perdidos
 
     print(f"O número era {numero_sec} e você fez um total de {pontos} ")
+    
+if (__name__=="__main__"):
+    jogar()
