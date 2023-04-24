@@ -16,11 +16,11 @@ def jogar():
 
     while True:
         print(' '.join(palavra_descoberta)) # Inserir as palavras numa string vazia
-        chute = input("Qual letra você gostaria de colocar? ")
+        chute = input("Qual letra você gostaria de colocar? ").lower() # converte o input para letras minusculas e printa vazia
         
-        if chute in palavra_secreta:
+        if chute in palavra_secreta.lower(): # compara as letras 
             for i in range(len(palavra_secreta)):
-                if palavra_secreta[i] == chute:
+                if palavra_secreta[i].lower() == chute: # compara as letras 
                     palavra_descoberta[i] = chute
            
             if '_' not in palavra_descoberta:
@@ -32,7 +32,7 @@ def jogar():
             if vida == 0: # Caso suas tentativas chegue a 0 você perde e revela a palavra
                 print('Você perdeu! A palavra era: ' + palavra_secreta)
                 break
-            print("Fim do jogo")
+    print("Fim")
 
 if (__name__=="__main__"):
     jogar()
